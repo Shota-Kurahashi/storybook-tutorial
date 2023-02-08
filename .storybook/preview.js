@@ -1,9 +1,24 @@
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-}
+import { mantineTheme } from "storybook-addon-mantine";
+import { theme } from "../src/libs/theme";
+
+// These props are passed to the MantineProvider used by all stories.
+const mantineProviderProps = {
+  withCSSVariables: false,
+  withGlobalStyles: true,
+  withNormalizeCSS: true,
+};
+
+export const decorators = [
+  mantineTheme(
+    [
+      { ...theme, themeName: "Light Mode" },
+      {
+        themeName: "light Mode - Green",
+        primaryColor: "green",
+        colorScheme: "light",
+        radius: 0,
+      },
+    ],
+    mantineProviderProps
+  ),
+];
