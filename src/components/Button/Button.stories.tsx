@@ -13,7 +13,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   children: "Button",
-  color: "blue",
+  color: "indigo",
   variant: "filled",
   size: "md",
   radius: "sm",

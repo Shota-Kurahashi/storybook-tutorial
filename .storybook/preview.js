@@ -1,5 +1,6 @@
 import { mantineTheme } from "storybook-addon-mantine";
 import { theme } from "../src/libs/theme";
+import "../src/styles/tailwind.css";
 
 // These props are passed to the MantineProvider used by all stories.
 const mantineProviderProps = {
